@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <!-- Template Definition -->
+    <definition name="template-def"
+                template="/WEB-INF/tiles/layouts/defaultLayout.jsp">
+        <put-attribute name="title" value="welcome" />
+        <put-attribute name="header" value="/WEB-INF/tiles/templates/defaultHeader.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/tiles/templates/defaultMenu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/templates/defaultFooter.jsp" />
+    </definition>
+
+    <!-- Main Page -->
+    <definition name="photogallery" extends="template-def">
+        <put-attribute name="title" value="Welcome" />
+        <put-attribute name="body" value="/WEB-INF/photogallery/photogallery.jsp" />
+        <put-attribute name="menu" value="" />
+    </definition>
+
+    <definition name="admin" extends="template-def">
+        <put-attribute name="title" value="admin"/>
+        <put-attribute name="body" value="/WEB-INF/admin/admin.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/tiles/templates/defaultHeader.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/tiles/templates/defaultMenu.jsp" />
+        <put-attribute name="footer" value="" />
+    </definition>
+
+    <definition name="adminAddUser" extends="template-def">
+        <put-attribute name="title" value="adminAddUser"/>
+        <put-attribute name="body" value="/WEB-INF/admin/adminAddUser.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/tiles/templates/defaultHeader.jsp" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="footer" value="" />
+    </definition>
+
+    <definition name="adminAddUserResult" extends="template-def">
+        <put-attribute name="title" value="adminAddUserSuccess"/>
+        <put-attribute name="body" value="/WEB-INF/admin/adminAddUserResult.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/tiles/templates/defaultHeader.jsp" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="footer" value="" />
+    </definition>
+
+    <definition name="adminAddGallery" extends="template-def">
+    <put-attribute name="title" value="adminAddGallery"/>
+    <put-attribute name="body" value="/WEB-INF/admin/adminAddGallery.jsp"/>
+    <put-attribute name="header" value="/WEB-INF/tiles/templates/defaultHeader.jsp" />
+    <put-attribute name="menu" value="" />
+    <put-attribute name="footer" value="" />
+</definition>
+
+    <definition name="adminAddGalleryResult" extends="template-def">
+        <put-attribute name="title" value="adminAddGalleryResult"/>
+        <put-attribute name="body" value="/WEB-INF/admin/adminAddGalleryResult.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/tiles/templates/defaultHeader.jsp" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="footer" value="" />
+    </definition>
+
+    <definition name="adminAddPhoto" extends="template-def">
+        <put-attribute name="title" value="adminAddGallery"/>
+        <put-attribute name="body" value="/WEB-INF/admin/adminAddPhoto.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/tiles/templates/defaultHeader.jsp" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="footer" value="" />
+    </definition>
+
+    <definition name="adminAddPhotoToGallery" extends="template-def">
+    <put-attribute name="title" value="adminAddPhotoToGallery"/>
+    <put-attribute name="body" value="/WEB-INF/admin/adminAddPhotoToGallery.jsp"/>
+    <put-attribute name="header" value="/WEB-INF/tiles/templates/defaultHeader.jsp" />
+    <put-attribute name="menu" value="" />
+    <put-attribute name="footer" value="" />
+    </definition>
+
+    <definition name="adminAddPhotoToGalleryResult" extends="template-def">
+        <put-attribute name="title" value="adminAddPhotoToGalleryResult"/>
+        <put-attribute name="body" value="/WEB-INF/admin/adminAddPhotoToGalleryResult.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/tiles/templates/defaultHeader.jsp" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="footer" value="" />
+    </definition>
+</tiles-definitions>

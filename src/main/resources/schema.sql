@@ -1,0 +1,3 @@
+-- CREATE TABLE User(
+--     id BIGINT AUTO_INCREMENT PRIMARY KEY
+-- )
