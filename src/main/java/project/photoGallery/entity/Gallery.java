@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,8 +26,11 @@ public class Gallery {
     @JoinColumn(name ="user_id")
     private User user;
 
-//    @OneToOne
-//    private Photo photo;
+    @OneToMany(mappedBy = "gallery",fetch = FetchType.EAGER)
+    private List<Photo> photos = new ArrayList<>();
 
-
+    public Gallery(String name, User user) {
+        this.name = name;
+        this.user = user;
+    }
 }

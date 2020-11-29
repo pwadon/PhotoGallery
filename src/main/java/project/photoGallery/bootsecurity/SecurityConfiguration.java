@@ -27,6 +27,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         http
+                .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/photogallery").authenticated()
                 .antMatchers("/user/**").hasAnyRole("USER","ADMIN")
@@ -46,15 +47,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .rememberMe().tokenValiditySeconds(2592000).key("mySecret!").rememberMeParameter("checkRememberMe");
     }
-
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-//        auth
-//                .inMemoryAuthentication()
-//                .withUser("admin").password(passwordEncoder().encode("admin")).roles("ADMIN");
-//    }
-
-
     @Bean
     DaoAuthenticationProvider authenticationProvider(){
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();

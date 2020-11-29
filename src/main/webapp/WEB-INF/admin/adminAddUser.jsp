@@ -15,22 +15,12 @@
            cssClass="container col-6"
            enctype="multipart/form-data">
             <form:label path="login">Login</form:label>
-            <form:input path="login" cssClass="form-input" placeholder="login"/>
-            <form:errors path="login" cssClass="alet alert-danger" element="div"/>
-            <form:password path="password" cssClass="form-input" placeholder="password"/>
-            <form:errors path="password" cssClass="alet alert-danger" element="div"/>
+            <form:input required="required" path="login" cssClass="form-input" placeholder="login"/>
+            <form:label path="password">Password</form:label>
+            <form:password required="required" path="password" cssClass="form-input" placeholder="password"/>
             <form:button>submit</form:button>
 </form:form>
-// dodac delete z listy userow
 
-<%--<form:form method="DELETE"--%>
-<%--                       action="Users"--%>
-<%--                       modelAttribute="Users">--%>
-
-<%--    <form:label path="Users">user</form:label>--%>
-<%--    <form:select path="Users" items="${Users.login}" cssClass="form-input"/>--%>
-<%--    <form:button>delete</form:button>--%>
-<%--</form:form>--%>
 
 </body>
 </html>

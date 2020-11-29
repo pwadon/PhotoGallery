@@ -1,7 +1,6 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%--<%@ taglib prefix="sec" uri="http://java.sun.com/jsp/jstl/core" %>--%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <script src="http://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="http://cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"    type="text/javascript"></script>

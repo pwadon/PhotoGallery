@@ -3,16 +3,15 @@ package project.photoGallery.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import project.photoGallery.entity.Gallery;
-import project.photoGallery.entity.User;
+import project.photoGallery.entity.Photo;
 
 import java.util.List;
 
-
 @Repository
-public interface GalleryRepository extends JpaRepository<Gallery,Long> {
+public interface PhotoRepository extends JpaRepository<Photo,Long> {
 
-    Gallery findByName(String name);
-    List<Gallery> findAllByUser(User user);
     @Override
-    Gallery getOne(Long aLong);
+    Photo getOne(Long aLong);
+
+    List<Photo> getAllByGallery(Gallery gallery);
 }

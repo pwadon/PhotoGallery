@@ -21,6 +21,20 @@ public class Photo {
     @Column(unique = true)
     private String name;
 
-    @OneToOne
+    private String type;
+
+    @Column(columnDefinition = "LONGBLOB")
+    private byte[] file;
+
+    @ManyToOne
+    @JoinColumn(name ="gallery_id")
     Gallery gallery;
+
+    public Photo(String name,String type, byte[] file,Gallery gallery) {
+        this.name = name;
+        this.type = type;
+        this.file = file;
+        this.gallery = gallery;
+    }
+
 }

@@ -7,8 +7,8 @@ import project.photoGallery.entity.Photo;
 import project.photoGallery.entity.User;
 import project.photoGallery.repository.GalleryRepository;
 import project.photoGallery.repository.UserRepository;
-
 import java.util.List;
+
 
 
 @Service
@@ -26,13 +26,21 @@ public class AdminService {
     }
 
     public void listOfUsers(Model model, UserRepository userRepository){
-        List<User> userList = userRepository.findAll();
+        List<User> userList = userRepository.findAllByRoles("USER");
         model.addAttribute("users",userList);
     }
 
     public void listOfGalleries(Model model, GalleryRepository galleryRepository){
         List<Gallery> galleries = galleryRepository.findAll();
         model.addAttribute("galleries",galleries);
+    }
+
+    public void addGalleryToModel(Model model, GalleryRepository galleryRepository, Long id){
+        Gallery gallery = galleryRepository.getOne(id);
+        model.addAttribute("gallery",gallery);
+    }
+    public Gallery getGallery(GalleryRepository galleryRepository, Long id){
+        return galleryRepository.getOne(id);
     }
 }
 

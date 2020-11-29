@@ -17,21 +17,13 @@
 <div class="card border-secondary mb-3" style=" float:left; width: 32rem; height: 28%; overflow: auto; margin-bottom:-60px;">
     <div class="card-header"></div>
     <div class="card-body">
-        <h4 class="card-title">fajnie by bylo tutaj dac usera </h4>
-        <p class="card-text">gallery name : ${gallery.name} </p>
-        <p><a href="http://localhost:8080/photogallery/admin/gallery/${gallery.id}">Show Gallery</a></p>
+        <h4 class="card-title">gallery name : ${gallery.name} </h4>
+        <p class="card-text">user : ${gallery.getUser().getLogin()} </p>
+        <p><a href="http://localhost:8080/photogallery/admin/gallery/${gallery.id}">Add photos to Gallery</a></p>
     </div>
 </div>
 </c:forEach>
 
-<%--<form:form modelAttribute="gallery" action="photo" method="get" >--%>
-<%--    <form:select name="gallery" path="gallery">--%>
-<%--        <c:forEach items ="${galleries}" var ="gallery">--%>
-<%--            <form:option value="${gallery.id}">${gallery.name}</form:option>--%>
-<%--        </c:forEach>--%>
-<%--        <form:button>submit</form:button>--%>
-<%--    </form:select>--%>
-<%--    </form:form>--%>
 
 </body>
 </html>

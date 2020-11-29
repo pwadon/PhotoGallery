@@ -7,8 +7,6 @@
     <title>Title</title>
 </head>
 <body>
-
-
 <form:form method="POST"
            action="galleries"
            modelAttribute="gallery"
@@ -16,9 +14,9 @@
            enctype="multipart/form-data">
 
     <form:label path="name">name</form:label>
-    <form:input path="name" cssClass="form-input" placeholder="name"/>
+    <form:input required="required"  path="name" cssClass="form-input" placeholder="name"/>
 
-
+    <form:label path="user">user</form:label>
     <form:select name="user" path="user">
         <c:forEach items ="${users}" var ="user">
             <form:option value="${user.id}">${user.login}</form:option>
@@ -26,9 +24,6 @@
     </form:select>
     <form:button>submit</form:button>
 </form:form>
-
-
-
 
 </body>
 </html>
