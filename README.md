@@ -3,7 +3,7 @@ database mysql
 
 Run:
 1. After cloning from github and establishing database connection run schema.sql script from resources folder to initiate database.
-2. In application.properties submit correct database paramethers.
+2. In application.properties submit correct database parameters.
 3. Run clean package on maven
 4. Run application by running PhotoGalleryApplications file from folder src/main/java/project/photoGallery
 5. There will be 3 users already in database(admin - pass: admin, piotrek - pass: piotrek, andrzej -pass: andrzej)
